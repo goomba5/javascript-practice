@@ -18,12 +18,12 @@ let library = [
     }
 ]
 
-showBooks = (library) => {
-    for (let i = 0; i < library.length; i++) {
+showBooks = (lib) => {
+    for (let i = 0; i < lib.length; i++) {
         console.log("Book " + i);
-        console.log(library[i].author);
-        console.log(library[i].title);
-        console.log(library[i].readingStatus);
+        console.log(lib[i].author);
+        console.log(lib[i].title);
+        console.log(lib[i].readingStatus);
         console.log("-----------------------")
     }
 
