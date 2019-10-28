@@ -18,8 +18,6 @@ delete anObject.killer; // deletes the killer property, because Uldren sucks
 console.log("After revmoing a property")
 console.log(anObject);
 
-console.log("--------------------------")
-
 // add new property
 console.log("--------------------------")
 console.log("Add new property")
