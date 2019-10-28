@@ -21,5 +21,7 @@ console.log(anObject);
 console.log("--------------------------")
 
 // add new property
+console.log("--------------------------")
+console.log("Add new property")
 anObject.alive = false;
 console.log(anObject);
