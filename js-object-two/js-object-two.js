@@ -17,3 +17,9 @@ delete anObject.killer; // deletes the killer property, because Uldren sucks
 
 console.log("After revmoing a property")
 console.log(anObject);
+
+console.log("--------------------------")
+
+// add new property
+anObject.alive = false;
+console.log(anObject);
