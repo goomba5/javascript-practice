@@ -1,4 +1,4 @@
-// write a javascript program to the reading status of the following books
+// write a javascript program to display the reading status of the following books
 
 let library = [
     {
@@ -17,3 +17,16 @@ let library = [
         readingStatus: true
     }
 ]
+
+showBooks = (library) => {
+    for (let i = 0; i < library.length; i++) {
+        console.log("Book " + i);
+        console.log(library[i].author);
+        console.log(library[i].title);
+        console.log(library[i].readingStatus);
+        console.log("-----------------------")
+    }
+
+}
+
+showBooks(library);
