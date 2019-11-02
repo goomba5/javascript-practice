@@ -1,6 +1,18 @@
-click = () => {
-    let input = document.getElementById("input").value;
-    console.log("Clicked");
+let num;
+
+randomNumber = () => {
+    num = Math.floor((Math.random() * 20) + 1);
+    console.log(num);
 }
 
-click();
+firstNumber = () => {
+    let numberOne = randomNumber().toString();
+    document.getElementById("firstNumber").innerHTML = numberOne;
+}
+
+getInput = () => {
+    let input = document.getElementById("userInput").value;
+    let answer = parseInt(input);
+    let sum = answer + 5;
+    alert(sum);
+}
