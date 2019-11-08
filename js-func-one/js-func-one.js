@@ -2,15 +2,24 @@
 
 reverseNumber = (num) => {
     let numArray = [];
-    numberStr = num.toString();
+    numToStr = num.toString();
 
-    for (let i = 0; i < numberStr.length; i++) {
-        numArray.push(numberStr.charAt(i));
+    for (let i = 0; i < numToStr.length; i++) {
+        numArray.push(numToStr.charAt(i));
     }
-    numArray.reverse();
-    console.log(numArray);
+    let str = numArray.reverse().join("");
+    let newNum = parseInt(str);
+    console.log(newNum);
 }
 
-let arr = [2, 3, 4, 5];
-
+// test 1
+console.log("Test 1");
 reverseNumber(257);
+
+// test 2
+console.log("Test 2");
+reverseNumber(68732);
+
+// test 3
+console.log("Test 3");
+reverseNumber(100000000002);
