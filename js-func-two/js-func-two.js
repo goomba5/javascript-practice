@@ -8,9 +8,9 @@ isPalindrome = (input) => {
         arr.push(str.charAt(i));
     }
 
-    let newArr = arr.reverse().join("");
+    let strReversed = arr.reverse().join("");
 
-    if (str === newArr) {
+    if (str === strReversed) {
         console.log(str + " is a palindrome!")
     }
     else {
