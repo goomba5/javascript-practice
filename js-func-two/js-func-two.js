@@ -29,3 +29,7 @@ isPalindrome("lol");
 // test 3
 console.log("Test 3");
 isPalindrome("He I eH")
+
+// test 4
+console.log("Test 4");
+isPalindrome("madam");
