@@ -9,7 +9,21 @@ alphabet = (input) => {
 
     let strSorted = arr.sort().join("");
 
-    console.log(strSorted);
+    console.log("Input: " + input);
+    console.log("Alphabetized: " + strSorted);
 }
 
-alphabet("blah");
+console.log("Test 1");
+alphabet("Captain Marvel");
+
+console.log("---------------");
+console.log("Test 2");
+alphabet("fdakfdklskeiwoinvio");
+
+console.log("---------------");
+console.log("Test 3");
+alphabet("zxpoerwyuwqnvmeionniwoqewinngiovo");
+
+console.log("---------------");
+console.log("Test 4");
+alphabet("gumbo");
