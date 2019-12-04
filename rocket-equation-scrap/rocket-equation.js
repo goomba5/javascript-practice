@@ -103,25 +103,16 @@ const modules = [120183,
     128739];
 
 getFuelForModules = (arr) => {
-    let newArr = [];
-    let fuel;
-    for (let i = 0; i < arr.length; i++) {
-        let mass = arr[i];
-        fuel = Math.floor((mass / 3)) - 2;
-        newArr.push(fuel);
-    }
-    return newArr;
-}
 
-calculateTotalFuel = (arr) => {
+    const newArr = arr.map(module => Math.floor(module / 3) - 2);
+
     let totalFuel = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        totalFuel += arr[i];
+    for (let i = 0; i < newArr.length; i++) {
+        totalFuel += newArr[i];
     }
-    console.log(totalFuel);
+
+    return totalFuel;
 }
 
-let fuelModules = getFuelForModules(modules);
-
-calculateTotalFuel(fuelModules);
+console.log(getFuelForModules(modules));
