@@ -103,29 +103,34 @@ const modules = [120183,
     128739];
 
 getFuelForModules = (arr) => {
-
-    // creates new array with the 1st fuel amount
-    const newArr = arr.map(module => Math.floor(module / 3) - 2).map(function (fuel) {
-        let moduleFuel = Math.floor((fuel / 3) - 2);
-        let moduleFuelTotal = 0;
-
-        while (moduleFuelTotal > 0) {
-            let total = 0;
-
-        }
-
-        return moduleFuelTotal;
-    })
-    console.log(newArr);
+    const newArr = arr.map(module => calculateFuel(module));
 
     let totalFuel = 0;
+    const fuelForFuels = newArr.map(fuel => fuelRecursion(fuel, totalFuel));
 
-    // final step of adding all of the amounts together
-    for (let i = 0; i < newArr.length; i++) {
-        totalFuel += newArr[i];
+    let total = getTotalFuel(fuelForFuels);
+
+    return total;
+}
+
+calculateFuel = (num) => {
+    let fuel = Math.floor((num / 3) - 2);
+
+    return fuel;
+}
+
+getTotalFuel = (arr) => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const allFuel = arr.reduce(reducer);
+
+    return allFuel;
+}
+
+fuelRecursion = (fuel, fuelTotal) => {
+    if (fuel <= 0) {
+        return fuelTotal;
     }
-
-    return totalFuel;
+    return fuelRecursion(calculateFuel(fuel), fuel + fuelTotal)
 }
 
 console.log(getFuelForModules(modules));
