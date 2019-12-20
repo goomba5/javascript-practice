@@ -5,7 +5,7 @@ let operator = document.getElementById("operator");
 let input = document.getElementById("userInput").value;
 let selection = document.getElementById("selection");
 let selectOption = selection.value;
-let operatorDisplay;
+let option;
 
 randomNumber = () => {
     num = Math.floor((Math.random() * 20) + 1);
@@ -26,29 +26,31 @@ secondOperand = () => {
 getOperator = (selectOption) => {
     switch (selectOption) {
         case "addition":
-            operatorDisplay = "+";
+            option = "+";
             break;
         case "subtraction":
-            operatorDisplay = "-";
+            option = "-";
             break;
         case "multiplication":
-            operatorDisplay = "X"
+            option = "X"
             break;
         case "division":
-            operatorDisplay = "/";
+            option = "/";
             break;
         // case "Greater Than":
-        //     operatorDisplay = ">";
+        //     option = ">";
         //     break;
         // case "Lesser Than":
-        //     operatorDisplay = "<";
+        //     option = "<";
         //     break;
         default:
-            operatorDisplay = "+";
+            option = "+";
             break;
     }
-    return operatorDisplay;
+    return option;
 }
+
+
 
 calculateAnswer = () => {
     let answer = parseInt(input);
@@ -58,3 +60,4 @@ calculateAnswer = () => {
 firstNumber.innerHTML = firstOperand();
 secondNumber.innerHTML = secondOperand();
 operator.innerHTML = getOperator();
+console.log(selectOption);

@@ -16,10 +16,11 @@ h2{
 
 #flashcard{
     margin:auto;
-    width:70%;
+    width:60%;
     border: 5px double black;
     border-radius: 5px;
     padding: 5px;
+    background-color: ghostwhite;
 }
 
 .flex-container{
