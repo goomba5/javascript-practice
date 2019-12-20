@@ -18,15 +18,10 @@ let library = [
     }
 ]
 
-showBooks = (lib) => {
-    for (let i = 0; i < lib.length; i++) {
-        console.log("Book " + i);
-        console.log(lib[i].author);
-        console.log(lib[i].title);
-        console.log(lib[i].readingStatus);
-        console.log("-----------------------")
-    }
-
+// let html = "<table border='1|1'>";
+let authorName = library[2].author;
+showAuthor = () => {
+    alert(library[2].author);
 }
 
-showBooks(library);
+document.getElementById("table").innerHTML = authorName;
